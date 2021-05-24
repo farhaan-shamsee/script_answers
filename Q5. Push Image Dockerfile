@@ -1,0 +1,9 @@
+#Pusing the image to dockerhub, adding name tag to push it to my public repo in hub.docker.com
+
+docker build -t docker-nginx-lua:farhaanshamsee . 
+docker push farhaanshamsee/docker-nginx-lua
+
+#Below is the new docker file
+FROM farhaanshamsee/docker-nginx-lua
+
+RUN apt-get install ffmpeg -y
